@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega-Mix Sounds | Mobile DJ Service</title>
+  <meta name="description" content="Professional Mobile DJ Service – Sound System, Disco Lights, Power Generator. Book Mega-Mix Sounds for your next event.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-alt: #121212;
+      --card: #1a1a1a;
+      --text: #f5f5f5;
+      --text-muted: #b0b0b0;
+      --accent: #c9a227;
+      --accent-hover: #e0b83a;
+      --border: #2a2a2a;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Header / Nav */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-link img {
+      height: 48px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.75rem;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+      background: 
+        radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.12) 0%, transparent 60%),
+        linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path d="M0 50h100M50 0v100" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></svg>');
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin: 0 auto 1.5rem;
+      filter: drop-shadow(0 0 20px rgba(201, 162, 39, 0.3));
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero .tagline {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 2rem;
+      letter-spacing: 0.08em;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.75rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0a0a;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(201, 162, 39, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #0a0a0a;
+    }
+
+    /* Sections common */
+    section {
+      padding: 5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: 0.75rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin: 0.75rem auto 0;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* About */
+    #about {
+      background: var(--bg-alt);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .about-text strong {
+      color: var(--accent);
+    }
+
+    .services-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--card);
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(201, 162, 39, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .service-item h4 {
+      font-size: 1rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .service-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Gallery */
+    #gallery {
+      background: var(--bg);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .gallery-item {
+      aspect-ratio: 4/3;
+      background: var(--card);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-placeholder {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* References */
+    #references {
+      background: var(--bg-alt);
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial {
+      background: var(--card);
+      padding: 1.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '"';
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      color: var(--accent);
+      opacity: 0.3;
+      position: absolute;
+      top: 0.5rem;
+      left: 1rem;
+      line-height: 1;
+    }
+
+    .testimonial p {
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial .author {
+      font-weight: 500;
+      color: var(--white);
+      font-size: 0.95rem;
+    }
+
+    .testimonial .role {
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    /* Vendors */
+    #vendors {
+      background: var(--bg);
+    }
+
+    .vendors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .vendor-card {
+      background: var(--card);
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .vendor-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .vendor-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .vendor-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Request Song */
+    #request {
+      background: var(--bg-alt);
+    }
+
+    .request-box {
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--card);
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .request-box img {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 1.5rem;
+      border-radius: 8px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .request-box h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
+    }
+
+    .request-box p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .request-email {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Contact */
+    #contact {
+      background: var(--bg);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 1.25rem;
+      font-size: 1.35rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(201, 162, 39, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+
+    .contact-item h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    .contact-form {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #050505;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 80px;
+      margin: 0 auto 1rem;
+      opacity: 0.9;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.25rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(300px, 80vw);
+        height: 100vh;
+        background: var(--bg-alt);
+        border-left: 1px solid var(--border);
+        padding: 5rem 2rem 2rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+      }
+
+      nav.open {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      nav a {
+        font-size: 1.1rem;
+      }
+
+      .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 998;
+      }
+
+      .nav-overlay.show {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 5rem;
+      }
+
+      .hero-logo {
+        width: 140px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      section {
+        padding: 3.5rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo-link">
+        <img src="images/logo.gif" alt="Mega-Mix Sounds Logo">
+        <span class="logo-text">Mega-<span>Mix</span> Sounds</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#vendors">Vendors</a></li>
+          <li><a href="#request">Request Song</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <img src="images/logo.gif" alt="Mega-Mix Sounds" class="hero-logo">
+      <h1>Mega-<span>Mix</span> Sounds</h1>
+      <p class="tagline">Professional Mobile DJ Service</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Book Your Event</a>
+        <a href="#request" class="btn btn-outline">Request a Song</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>Bringing the party to you with professional sound, lights, and reliable power wherever you need it.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Welcome to <strong>Mega-Mix Sounds</strong> — your trusted mobile DJ service for weddings, private parties, corporate events, festivals, and everything in between.
+          </p>
+          <p>
+            With years of experience behind the decks and a passion for creating unforgettable atmospheres, I deliver high-energy mixes tailored to your crowd and your playlist. From classic hits to the latest tracks, the music keeps the dance floor packed.
+          </p>
+          <p>
+            Fully self-contained and ready for any location — indoor or outdoor — I arrive with everything needed to turn your event into a night to remember.
+          </p>
+        </div>
+        <div class="services-list">
+          <div class="service-item">
+            <div class="service-icon">🔊</div>
+            <div>
+              <h4>Sound System</h4>
+              <p>Professional-grade speakers &amp; mixing for crystal-clear audio at any size venue.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">💡</div>
+            <div>
+              <h4>Disco Lights</h4>
+              <p>Dynamic lighting packages that transform the space and energize the dance floor.</p>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">⚡</div>
+            <div>
+              <h4>Power Generator</h4>
+              <p>Reliable power supply so your event runs smoothly even in remote locations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2>Gallery</h2>
+        <p>Snapshots from past events. More photos coming soon — replace these placeholders with your own images in the <code>/images/</code> folder.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <p>Event Photo 1</p>
+            <small>images/gallery-1.jpg</small>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <p>Event Photo 2</p>
+            <small>images/gallery-2.jpg</small>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <p>Event Photo 3</p>
+            <small>images/gallery-3.jpg</small>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <p>Event Photo 4</p>
+            <small>images/gallery-4.jpg</small>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <p>Event Photo 5</p>
+            <small>images/gallery-5.jpg</small>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">
+            <p>Event Photo 6</p>
+            <small>images/gallery-6.jpg</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="references">
+    <div class="container">
+      <div class="section-header">
+        <h2>References</h2>
+        <p>What clients are saying about Mega-Mix Sounds.</p>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p>Mega-Mix kept the energy high all night. The sound was perfect and the lighting made the reception feel like a real club. Highly recommend!</p>
+          <div class="author">— Sarah &amp; Mike</div>
+          <div class="role">Wedding Reception</div>
+        </div>
+        <div class="testimonial">
+          <p>Professional from start to finish. Showed up early, set up quickly, and the generator kept everything running without a hitch at our outdoor venue.</p>
+          <div class="author">— James R.</div>
+          <div class="role">Corporate Event</div>
+        </div>
+        <div class="testimonial">
+          <p>Best DJ we’ve hired. Took song requests on the fly and mixed seamlessly. The party never stopped.</p>
+          <div class="author">— The Thompson Family</div>
+          <div class="role">Anniversary Party</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vendors -->
+  <section id="vendors">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vendors</h2>
+        <p>Trusted partners and equipment sources I work with to deliver top-quality events.</p>
+      </div>
+      <div class="vendors-grid">
+        <div class="vendor-card">
+          <h3>Sound &amp; Lighting</h3>
+          <p>Professional audio and disco lighting packages ready for any venue size.</p>
+        </div>
+        <div class="vendor-card">
+          <h3>Power Solutions</h3>
+          <p>Reliable generators ensuring uninterrupted performance wherever the party is.</p>
+        </div>
+        <div class="vendor-card">
+          <h3>Event Partners</h3>
+          <p>Collaborations with venues, planners, and other vendors for seamless events.</p>
+        </div>
+        <div class="vendor-card">
+          <h3>Music Libraries</h3>
+          <p>Extensive licensed music collection covering every genre and era.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request a Song -->
+  <section id="request">
+    <div class="container">
+      <div class="section-header">
+        <h2>Request a Song</h2>
+        <p>Scan the QR code with your phone to send a song request. It stays the same for every event.</p>
+      </div>
+      <div class="request-box">
+        <img src="images/qr-code.png" alt="Scan to request a song">
+        <h3>Scan to Request</h3>
+        <p>Point your camera at the code above. Requests go directly to the DJ.</p>
+        <a href="mailto:djmixit@msn.com?subject=Song%20Request" class="request-email">djmixit@msn.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Me</h2>
+        <p>Ready to book Mega-Mix Sounds for your next event? Reach out today.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:djmixit@msn.com">djmixit@msn.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>Available upon request</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Service Area</h4>
+              <p>Mobile service — available for events near you</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🎵</div>
+            <div>
+              <h4>What’s Included</h4>
+              <p>Sound System • Disco Lights • Power Generator</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form action="mailto:djmixit@msn.com" method="get" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="event">Event Type</label>
+              <select id="event" name="event">
+                <option value="">Select event type</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Private Party">Private Party</option>
+                <option value="Corporate">Corporate Event</option>
+                <option value="Festival">Festival / Public Event</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="body" placeholder="Date, location, number of guests, special requests..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send Inquiry</button>
+            <p class="form-note">Opens your email client. Or email directly: <a href="mailto:djmixit@msn.com">djmixit@msn.com</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/logo.gif" alt="Mega-Mix Sounds" class="footer-logo">
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#references">References</a>
+      <a href="#vendors">Vendors</a>
+      <a href="#request">Request Song</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; <span id="year"></span> Mega-Mix Sounds. All rights reserved.</p>
+    <p style="margin-top:0.5rem;"><a href="mailto:djmixit@msn.com">djmixit@msn.com</a></p>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    const overlay = document.getElementById('navOverlay');
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      overlay.classList.remove('show');
+    }
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Active nav on scroll (simple)
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        if (scrollY >= top) current = section.getAttribute('id');
+      });
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+</body>
+</html>
