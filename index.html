@@ -102,6 +102,14 @@
       color: var(--accent);
     }
 
+    .logo-subtag {
+      display: block;
+      font-size: 0.75rem;
+      color: #ccc;
+      letter-spacing: 0.5px;
+      margin-top: -4px;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
@@ -304,6 +312,14 @@
 
     .about-text strong {
       color: var(--accent);
+    }
+
+    .service-area {
+      font-size: 0.9rem;              
+      color: #d4af37;               
+      letter-spacing: 1px;          
+      margin-top: -4px;             
+      text-transform: uppercase;    
     }
 
     .services-list {
@@ -750,7 +766,10 @@
     <div class="nav-container">
       <a href="#home" class="logo-link">
         <img src="images/logo.gif" alt="Mega-Mix Sounds Logo">
-        <span class="logo-text">Mega-<span>Mix</span> Sounds</span>
+        <span class="logo-text">
+          Mega-<span>Mix</span> Sounds
+          <span class="logo-subtag">Mobile DJ Service</span>
+        </span>
       </a>
       <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
       <nav id="mainNav">
@@ -773,6 +792,7 @@
       <img src="images/logo.gif" alt="Mega-Mix Sounds" class="hero-logo">
       <h1>Mega-<span>Mix</span> Sounds</h1>
       <p class="tagline">Professional Mobile DJ Service</p>
+      <p class="service-area">20+ Years Serving the Dallas / Fort Worth Metroplex</p>
       <div class="cta-buttons">
         <a href="#contact" class="btn btn-primary">Book Your Event</a>
         <a href="#request" class="btn btn-outline">Request a Song</a>
@@ -785,7 +805,7 @@
     <div class="container">
       <div class="section-header">
         <h2>About Me</h2>
-        <p>Bringing the party to you with professional sound, lights, and reliable power wherever you need it.</p>
+        <p>Bringing the party to you with over 20 years of experience in DFW, delivering great music, fun energy, and reliable professional equipment for every type of event.</p>
       </div>
       <div class="about-grid">
         <div class="about-text">
@@ -804,7 +824,7 @@
             <div class="service-icon">🔊</div>
             <div>
               <h4>Sound System</h4>
-              <p>Professional-grade speakers &amp; mixing for crystal-clear audio at any size venue.</p>
+              <p>Professional-grade speakers &amp; mixing for crystal-clear audio at any size venue. </p>
             </div>
           </div>
           <div class="service-item">
@@ -821,6 +841,13 @@
               <p>Reliable power supply so your event runs smoothly even in remote locations.</p>
             </div>
           </div>
+          <div class="service-item">
+            <div class="service-icon">🎤</div>
+            <div>
+              <h4>Karaoke</h4>
+              <p>A full karaoke setup that lets guests take the mic and own the spotlight.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -831,7 +858,7 @@
     <div class="container">
       <div class="section-header">
         <h2>Gallery</h2>
-        <p>Snapshots from past events. More photos coming soon — replace these placeholders with your own images in the <code>/images/</code> folder.</p>
+        <p>Snapshots from past events. More photos coming soon!</p>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item">
@@ -865,26 +892,26 @@
       </div>
       <div class="testimonials">
         <div class="testimonial">
-          <p>Mega-Mix kept the energy high all night. The sound was perfect and the lighting made the reception feel like a real club. Highly recommend!</p>
-          <div class="author">— Sarah &amp; Mike</div>
+          <p>I didn’t realize how much a DJ could shape the feeling of a wedding until he stepped in and turned the night into something alive. His music carried us from moment to moment with an easy confidence, and his outgoing, experienced presence made every guest feel part of the celebration in a way we’ll never forget.</p>
+          <div class="author">— Matthew &amp; Rebecca</div>
           <div class="role">Wedding Reception</div>
         </div>
         <div class="testimonial">
           <p>Professional from start to finish. Showed up early, set up quickly, and the generator kept everything running without a hitch at our outdoor venue.</p>
-          <div class="author">— James R.</div>
-          <div class="role">Corporate Event</div>
+          <div class="author">— Cindy Peck</div>
+          <div class="role">Cowtown Marathon</div>
         </div>
         <div class="testimonial">
           <p>Best DJ we’ve hired. Took song requests on the fly and mixed seamlessly. The party never stopped.</p>
-          <div class="author">— The Thompson Family</div>
-          <div class="role">Anniversary Party</div>
+          <div class="author">— Marcie Sanchez</div>
+          <div class="role">Wedding Reception</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Vendors -->
-  <section id="vendors">
+  <!-- <section id="vendors">
     <div class="container">
       <div class="section-header">
         <h2>Vendors</h2>
@@ -909,7 +936,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Request a Song -->
   <section id="request">
@@ -962,7 +989,7 @@
             <div class="contact-icon">🎵</div>
             <div>
               <h4>What’s Included</h4>
-              <p>Sound System • Disco Lights • Power Generator</p>
+              <p>Sound System • Disco Lights • Power Generator • Karaoke</p>
             </div>
           </div>
         </div>
